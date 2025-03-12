@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Build web version
-        run: npx expo export --output-dir dist
+        run: npx expo export #--output-dir dist
 
       - name: Check if dist exists
         run: |
