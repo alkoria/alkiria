@@ -18,10 +18,10 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --save-dev gh-pages
 
       - name: Build web version
-        run: npx expo export #--output-dir dist
+        run: npx expo export --output-dir dist
 
       - name: Check if dist exists
         run: |
@@ -33,8 +33,5 @@ jobs:
       - name: List files in dist
         run: ls -la dist
 
-      - name: Deploy alkiria
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GH_PAGES_TOKEN_ALKIRIA }}
-          publish_dir: ./dist
+      - name: Deploy to GitHub Pages
+        run: npx gh-pages -d dist
