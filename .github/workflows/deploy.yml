@@ -36,5 +36,5 @@ jobs:
 
       - name: Deploy Alkiria
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAGES_TOKEN_ALKIRIA }}
         run: npx gh-pages -d dist
