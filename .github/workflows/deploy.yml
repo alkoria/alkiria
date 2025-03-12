@@ -33,5 +33,5 @@ jobs:
       - name: List files in dist
         run: ls -la dist
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy alkiria
         run: npx gh-pages -d dist
